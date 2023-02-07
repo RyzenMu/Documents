@@ -1,25 +1,51 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {Component} from 'react';
+import App1 from './App1';
+import App2 from './App2';
+import Demo from './Demo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+
+  mystyle = {
+    color : 'blue',
+    fontSize : '40px',
+    background : 'red'
+            }
+
+
+  render(){
+    var mystyle = {
+      fontSize : 30,
+      fontFamily : 'Courier',
+      color : 'grey',
+    }
+
+    let i = 2;
+
+    return(
+      <div className='heading' >
+        <h1>Code Binx</h1>
+        <p style={mystyle} > Welcome to react course</p>
+        <h1>{ i == 2 ? 'twoooo' : 'Something else'}</h1> 
+        <App1 />
+        <App2 />
+        <Demo />
+        
+      </div>
+    )
+  }
 }
 
-export default App;
+class Details extends Component {
+
+  render(){
+    return (
+      <div>
+      <h2> This is dual component</h2>
+      </div>
+    )
+  }
+}
+
+export default Details;
