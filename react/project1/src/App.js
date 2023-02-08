@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import App1 from './App1';
 import App2 from './App2';
 import Demo from './Demo';
+import NewComponent from './NewComponent';
 
 class App extends Component{
 
@@ -28,10 +29,11 @@ class App extends Component{
         <h1>Code Binx</h1>
         <p style={mystyle} > Welcome to react course</p>
         <h1>{ i == 2 ? 'twoooo' : 'Something else'}</h1> 
+
         <App1 />
         <App2 />
         <Demo />
-        
+        <NewComponent />
       </div>
     )
   }
@@ -43,6 +45,7 @@ class Details extends Component {
     return (
       <div>
       <h2> This is dual component</h2>
+      <App />
       </div>
     )
   }
